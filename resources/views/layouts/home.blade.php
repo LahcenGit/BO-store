@@ -34,6 +34,9 @@
         <link rel="stylesheet" href="{{asset('Template/css/subscribe-better.cs')}}s">
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css">
         <link rel="stylesheet" href="{{asset('Template/css/style.css')}}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,6 +55,12 @@
         </script>
 
     </head>
+
+    <style>
+        html * {
+        font-family: 'Cairo', sans-serif;
+        }
+    </style>
     <body id="home4">
 
         <!-- PRELOADER -->
@@ -66,11 +75,11 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="tb_left pull-left">
-                                        <p>مرحبا بكم في متجر على شبكة الإنترنت</p>
+                                        <p>مرحبا بكم في المتجر الالكتروني لتوابل الأجواد</p>
                                     </div>
                                     <div class="tb_center pull-left">
                                         <ul>
-                                            <li> قدم طلبك عبر الهاتف: <a href="#">0655258756</a><i class="fa fa-phone"></i></li>
+                                            <li> قدم طلبك عبر الهاتف : <a href="#">0655258756</a><i class="fa fa-phone"></i></li>
                                             
                                         </ul>
                                     </div>
@@ -78,24 +87,14 @@
                                         <ul>
                                             <li>
                                                 <div class="tbr-info">
-                                                    <span>الحساب <i class="fa fa-caret-down"></i></span>
+                                                    <span>تسجيل الدخول <i class="fa fa-caret-down"></i></span>
                                                     <div class="tbr-inner">
                                                         <a href="my-account.html">حسابي</a>
-                                                        <a href="#">الدفع</a>
                                                         <a href="login-page.html">تسجيل الدخول</a>
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li>
-                                                <div class="tbr-info">
-                                                    <span><img src="images/basic/flag1.png" alt=""/>&nbsp;العربية <i class="fa fa-caret-down"></i></span>
-                                                    <div class="tbr-inner">
-                                                        <a href="#"><img src="images/basic/flag1.png" alt=""/>الفرنسية</a>
-                                                        <a href="#"><img src="images/basic/flag2.png" alt=""/>الانجليزية</a>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </li>
+                                            
                                         </ul>
                                     </div>
                                 </div>
@@ -114,7 +113,7 @@
                                     <span class="icon-bar"></span>
                                 </button>
                                 <!-- Logo -->
-                                <a class="navbar-brand" href="./index.html"><img src="{{asset('Template/images/basic/logo-lite.png')}}" class="img-responsive" alt=""/></a>
+                                <a class="navbar-brand" href="./index.html"><img src="{{asset('Template/images/basic/logo-bo.png')}}" class="img-responsive" style="height: 100px!important;" alt=""/></a>
                             </div>
                             <!-- Cart & Search -->
                             <div class="header-xtra pull-right">
@@ -168,7 +167,7 @@
                                     </li>
                                     
                                     <li class="dropdown">
-                                        <a href="./categories-grid.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Shop</a>
+                                        <a href="./categories-grid.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">التصنيفات</a>
                                         <ul class="dropdown-menu submenu" role="menu">
                                             <li><a href="./categories-grid.html">Shop - Grid 1</a>
                                             <li><a href="./categories-list.html">Shop - Grid 2</a>
@@ -180,14 +179,14 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Blog</a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">توابل</a>
                                         <ul class="dropdown-menu submenu" role="menu">
                                             <li><a href="./blog.html">Blog Posts</a>
                                             <li><a href="./blog-single.html">Blog Single</a>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Get inspired</a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">أعشاب</a>
                                         <ul class="dropdown-menu submenu" role="menu">
                                             <li><a href="#">Nam ipsum est</a>
                                             <li><a href="#">Volutpat</a>
@@ -202,7 +201,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Technology</a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">منتجات جديدة</a>
                                         <ul class="dropdown-menu submenu" role="menu">
                                             <li><a href="#">Nam ipsum est</a>
                                             <li><a href="#">Volutpat</a>
@@ -217,7 +216,7 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pages</a>
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">اتصل بنا</a>
                                         <ul class="dropdown-menu submenu" role="menu">                                         
                                             <li><a href="contact-1.html">Contact Style 1</a></li>
                                             <li><a href="contact-2.html">Contact Style 2</a></li>
@@ -245,16 +244,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3 widget-footer">
-                            <h5>عن المحل</h5>
+                            <h5>الأجواد</h5>
                             <img src="images/basic/logo-lite.png" class="img-responsive space10" alt=""/>
-                            <p>توابل هي أجود التوابل بدون منازع</p>
+                            <p>توابل الأجواد الطبيعية بالكامل</p>
                             <div class="clearfix"></div>
                             <ul class="f-social">
                                 <li><a href="https://www.facebook.com" class="fa fa-facebook"></a></li>
-                                <li><a href="https://www.twitter.com" class="fa fa-twitter"></a></li>
-                                <li><a href="https://feedburner.google.com" class="fa fa-rss"></a></li>
                                 <li><a href="mailto:email@website.com" class="fa fa-envelope"></a></li>
-                                <li><a href="https://www.pinterest.com" class="fa fa-pinterest"></a></li>
                                 <li><a href="https://www.instagram.com" class="fa fa-instagram"></a></li>
                             </ul>
                         </div>
@@ -287,15 +283,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-7">
-                            <ul class="flinks">
-                                <li><a href="./index.html">Site Map</a></li>
-                                <li><a href="./index.html">Search Terms</a></li>
-                                <li><a href="./index.html">Advanced Search</a></li>
-                                <li><a href="./index.html">Orders and Returns</a></li>
-                                <li><a href="./index.html">Customer Service</a></li>
-                            </ul>
-                            <br>
-                            <p>Copyright 2015 &middot; Designed & Developed by <a href="#">jThemes Studio.</a> All rights reserved</p>
+                          
+                            <p>Copyright 2022 &middot; Designed & Developed by <a href="#">InnoDev.</a> </p>
                         </div>
                         <div class="col-md-5">
                             <img src="images/basic/payment.png" class="pull-right img-responsive payment" alt=""/>
@@ -308,27 +297,7 @@
     </div>
 
     <!-- Newsletter -->
-    <div class="subscribe-me">
-        <a href="#close" class="sb-close-btn">x</a>
-        <div id="popup-newsletter">
-            <div class="block-content">
-                <div class="form-subscribe-header">
-                    <label>انضم إلى رسالة البريد الإلكتروني الخاصة بنا </label>
-                </div>
-                <div class="clearfix space30"></div>
-               <div class="clearfix space30"></div>
-                <span class="promo-panel-text"></span>
-                <div class="clearfix space30"></div>
-                <div class="input-box">
-                    <input name="email" id="pnewsletter" title="Sign up for our newsletter" class="input-text required-entry validate-email" type="text">
-                </div>
-                <div class="actions">
-                    <button type="submit" title="JOIN NOW !" class="button"><span><span>!انظم الان</span></span></button>
-                </div>
-                <span class="promo-panel-text1">لا شكرا ! لست مهتمًا </span><br>
-            </div>
-        </div>
-    </div>
+   
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
