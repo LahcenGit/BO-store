@@ -6,17 +6,15 @@
                     <div class="tp-banner slider-4">
                         <ul>
                             <!-- SLIDE  -->
-                            <!-- SLIDE  -->
                             <li data-transition="fade" data-slotamount="2" data-masterspeed="500" data-thumb="homeslider_thumb1.jpg"  data-saveperformance="on"  data-title="Intro Slide">
-                                <!-- MAIN IMAGE -->
-                                <img src="{{asset('Template/images/dummy.png')}}"  alt="slidebg1" data-lazyload="{{asset('Template/images/epic.jpg')}}" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-                             
-                               
                                 
+                                <img src="{{asset('Template/images/dummy.png')}}"  alt="slidebg1" data-lazyload="{{asset('Template/images/slider-bo.jpg')}}" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                             
+    
                             </li>
                             <li data-transition="fade" data-slotamount="2" data-masterspeed="500" data-thumb="homeslider_thumb1.jpg"  data-saveperformance="on"  data-title="Intro Slide">
                                 <!-- MAIN IMAGE -->
-                                <img src="images/dummy.png"  alt="slidebg1" data-lazyload="{{asset('Template/images/epic.jpg')}}" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <img src="images/dummy.png"  alt="slidebg1" data-lazyload="{{asset('Template/images/slider-bo.jpg')}}" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                              
                             </li>
                         </ul>
@@ -35,28 +33,28 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="block-content">
-                                        <a href="#"><img src="{{asset('Template/images/blocks/12.jpg')}}" class="img-responsive" alt=""/></a>
+                                        <a href="#"><img src="{{asset('Template/images/blocks/blok-huile.png')}}" class="img-responsive" alt=""/></a>
                                         <div class="text-style3">
-                                            <h6>Coming soon</h6>
+                                            <!-- طبيعي بالكامل -->  
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="block-content">
-                                        <a href="#"><img src="{{asset('Template/images/blocks/13.jpg')}}" class="img-responsive" alt=""/></a>
+                                        <a href="#"><img src="{{asset('Template/images/blocks/blok-epice.png')}}" class="img-responsive" alt=""/></a>
                                         <div class="text-style4">
-                                            <h4>Womenswear</h4>
-                                            <p>New Women in the wideworld</p>
+                                            <h4>اكتشفوا</h4>
+                                            <p>مجموعة التوابل الخاصة</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="block-content">
-                                        <a href="#"><img src="{{asset('Template/images/blocks/14.jpg')}}" class="img-responsive" alt=""/></a>
+                                        <a href="#"><img src="{{asset('Template/images/blocks/blok-herbe.png')}}" class="img-responsive" alt=""/></a>
                                         <div class="text-style2">
-                                            <h6>Leather Bag</h6>
-                                            <p>Design by my passion</p>
-                                            <a href="#">Shop Now</a>
+                                            <h6>أعشاب </h6>
+                                            <p>طبيعية بالكامل</p>
+                                            <a href="#">تسوق الان</a>
                                         </div>
                                     </div>
                                 </div>
@@ -71,8 +69,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="heading-sub heading-sub2 text-center">
-                            <h5><span>منتجات مميزة</span></h5>
-                            <p>Ut ut ipsum imperdiet libero viverra blandit. Aliquam ultricies libero ullamcorper, dignissim ipsum sed, placerat ante. Sed luctus, ex<br>id gravida venenatis, diam enim tristique turpis, eget dapibus velit eros sed ligula.</p>
+                            <h5><span>منتجات جديدة</span></h5>
+                            <p>اكتشفوا منتجات الأجواد الجديدة الطبيعية ذات الجودة العالية</p>
                         </div>
                         <div class="product-carousel3">
                             <div class="pc-wrap">
@@ -89,7 +87,8 @@
                                     </div>
                                     <div class="product-info">
                                         <h4 class="product-title"><a href="{{url('commande')}}">كسكس الأجواد</a></h4>
-                                        <span class="product-price"> <em>- السعر</em>   دج1000    </span>
+                                        <span class="product-price"> <b> د.ج 1.000 </b>   </span>
+                                        <button type="button" class="btn btn-danger">أطلب الان</button>
                                         
                                     </div>
                                 </div>
@@ -107,7 +106,8 @@
                                     </div>
                                     <div class="product-info">
                                         <h4 class="product-title"><a href="{{url('commande')}}">زيت الزيتون الطبيعي</a></h4>
-                                        <span class="product-price"><em>- السعر</em> دج 1000</span>
+                                        <span class="product-price"> <b> د.ج 1.000 </b>   </span>
+                                        <button type="button" class="btn btn-danger">أطلب الان</button>
                                         
                                     </div>
                                 </div>
@@ -126,7 +126,8 @@
                                     </div>
                                     <div class="product-info">
                                         <h4 class="product-title"><a href="{{url('commande')}}">كبسولات السكر</a></h4>
-                                        <span class="product-price"> <em>- السعر</em> 1000 دج </span>
+                                        <span class="product-price"> <b> د.ج 1.000 </b>   </span>
+                                        <button type="button" class="btn btn-danger">أطلب الان</button>
                                         
                                     </div>
                                 </div>
@@ -145,7 +146,8 @@
                                     </div>
                                     <div class="product-info">
                                         <h4 class="product-title"><a href="{{url('commande')}}">كسكس الأجواد</a></h4>
-                                        <span class="product-price"> <em>- السعر</em>   دج1000    </span>
+                                        <span class="product-price"> <b> د.ج 1.000 </b>   </span>
+                                        <button type="button" class="btn btn-danger">أطلب الان</button>
                                         
                                     </div>
                                 </div>
@@ -163,7 +165,8 @@
                                     </div>
                                     <div class="product-info">
                                         <h4 class="product-title"><a href="{{url('commande')}}">زيت الزيتون الطبيعي</a></h4>
-                                        <span class="product-price"><em>- السعر</em> دج 1000</span>
+                                        <span class="product-price"> <b> د.ج 1.000 </b>   </span>
+                                        <button type="button" class="btn btn-danger">أطلب الان</button>
                                         
                                     </div>
                                 </div>
@@ -182,7 +185,8 @@
                                     </div>
                                     <div class="product-info">
                                         <h4 class="product-title"><a href="{{url('commande')}}">كبسولات السكر</a></h4>
-                                        <span class="product-price"> <em>- السعر</em> 1000 دج </span>
+                                        <span class="product-price"> <b> د.ج 1.000 </b>   </span>
+                                        <button type="button" class="btn btn-danger">أطلب الان</button>
                                         
                                     </div>
                                 </div>
@@ -203,7 +207,7 @@
                         <div class="col-md-3">
                             <div class="pi-wrap text-center">
                                 <i class="fa fa-money"></i>
-                                <h4>تخلص كي توصلك السلعة<span>إشتري بكل ثقة وأمان</span></h4>
+                                <h4 style="font-family: font-family: 'Cairo', sans-serif!important;">تخلص كي توصلك السلعة<span>إشتري بكل ثقة وأمان</span></h4>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -220,7 +224,7 @@
                         </div>
                         <div class="col-md-3">
                             <div class="pi-wrap text-center">
-                                <i  class="fa fa-solid "></i>
+                                <i  class="fa fa-plane"></i>
                                 <h4>إستبدال وإسترجاع مجاني<span>حقك 100% مضمون معنا!</span></h4>
                             </div>
                         </div>
