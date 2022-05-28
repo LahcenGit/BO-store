@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('wilayas', function (Blueprint $table) {
             $table->id();
+            $table->integer('code');
+            $table->string('name');
+            $table->string('ar_name');
+            $table->float('longitude');
+            $table->float('latitude');
             $table->timestamps();
         });
     }

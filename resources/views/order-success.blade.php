@@ -302,80 +302,15 @@
             <div class="space10"></div>
 
             <!-- MAIN CONTENT -->
-            <div class="shop-single">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <!-- HTML -->
-                            <div id="accordion">
-                                <h4 class="accordion-toggle">لتقديم الطلب قم بملء جميع المعطيات</h4>
-                                <div class="accordion-content default">
-                                    <div>
-                                        <div class="row">
-                                            <form id="login-form">
-                                            <div class="col-md-6">
-                                                <fieldset>
-                                                        <ul class="form-list">
-                                                            <li>
-                                                                <label for="login-email" class="required">الاسم <em>*</em></label>
-                                                                <div class="input-box">
-                                                                    <input class="input-text required-entry validate-email"  name="firstname" value="" type="text">
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <label for="login-email" class="required">الللقب <em>*</em></label>
-                                                                <div class="input-box">
-                                                                    <input class="input-text required-entry validate-email"  name="lastname" value="" type="text">
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <label for="login-email" class="required">رقم الهاتف <em>*</em></label>
-                                                                <div class="input-box">
-                                                                    <input class="input-text required-entry validate-email"  name="phone" value="" type="text">
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                     </fieldset>
-                                            
-                                            </div>
-                                            <div class="col-md-6">
-                                                <fieldset>
-                                                   <ul class="form-list">
-                                                      <li>
-                                                          <label for="login-email" class="required">الولاية <em>*</em></label>
-                                                           <select class="form-control " id="sel1"  class="selectpicker" data-live-search="true" name="wilaya">
-                                                            <option value=0>الولاية</option>
-                                                            <option value=0>تلمسان</option>
-                                                            <option value=0>وهران</option>
-                                                            <option value=0>الجزائر</option>
-                                                            </select>
-                                                            </li>
-                                                            <li>
-                                                                <label for="login-email" class="required">العنوان الكامل <em>*</em></label>
-                                                                <div class="input-box">
-                                                                    <input class="input-text required-entry validate-email"  name="phone" value="" type="text">
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <label></label>
-                                                            <div class="input-box">
-                                                            <button class="btn large full-width d-f jc-c shake-x" id="add-to-cart"><span>إضغط هنا للطلب</span></button>
-                                                            </div>
-                                                            </li>
-                                                        </ul>
-                                                     </fieldset>
-                                               
-                                            </div>
-                                        </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                       
-                    </div>
+            <div class="col-lg-6">
+
+                <div class="alert alert-success" role="alert">
+                    <h4 class="alert-heading"> {{$name}} شكرا</h4>
+                    <p>لقد تلقينا طلبك</p>
+                    <hr>
+                    <p class="mb-0">سنتواصل معك في أقرب وقت ممكن</p>
                 </div>
+
             </div>
 
             <div class="clearfix space20"></div>

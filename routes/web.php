@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,12 +21,14 @@ use App\Http\Controllers\HomeController;
 });*/
 
 Route::resource('/',HomeController::class);
-Route::get('/commande', function () {
-    return view('add-commande');
-});
+
+
 
 Route::get('/dashboard-admin', function () {
     return view('admin.dashboard-admin');
 });
 Route::resource('/dashboard-admin/category',CategoryController::class);
 Route::resource('/dashboard-admin/products',ProductController::class);
+Route::resource('/dashboard-admin/orders',OrderController::class);
+Route::resource('/order-products',OrderController::class);
+Route::get('/order-product/{id}',[App\Http\Controllers\OrderController::class,'order']);
