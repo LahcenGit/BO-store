@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,13 +23,13 @@ use App\Http\Controllers\OrderController;
 
 Route::resource('/',HomeController::class);
 
+Auth::routes();
 
 
-Route::get('/dashboard-admin', function () {
-    return view('admin.dashboard-admin');
-});
+Route::resource('/dashboard-admin',AdminController::class);
 Route::resource('/dashboard-admin/category',CategoryController::class);
 Route::resource('/dashboard-admin/products',ProductController::class);
 Route::resource('/dashboard-admin/orders',OrderController::class);
 Route::resource('/order-products',OrderController::class);
 Route::get('/order-product/{id}',[App\Http\Controllers\OrderController::class,'order']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'home']);

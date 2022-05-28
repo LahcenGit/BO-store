@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('adresse');
             $table->string('phone');
             $table->string('status');
+            $table->integer('qte');
+            $table->integer('total');
             $table->foreign('wilaya_id')->references('id')->on('wilayas')->onDelete('cascade');
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->timestamps();

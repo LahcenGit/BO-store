@@ -22,6 +22,7 @@ class OrderController extends Controller
 
     public function store(Request $request){
         $order = new Order();
+        $product = Product::where('id',$request->product)->first();
         $order->product_id = $request->product;
         $order->firstname =  $request->firstname;
         $order->lastname = $request->lastname;
@@ -29,6 +30,8 @@ class OrderController extends Controller
         $order->wilaya_id = $request->wilaya;
         $order->adresse = $request->adresse;
         $order->phone = $request->phone;
+        $order->qte = $request->qte;
+        $order->total = $request->qte * $product->price;
         $order->save();
         $name = $request->firstname;
         return view('order-success',compact('name'));

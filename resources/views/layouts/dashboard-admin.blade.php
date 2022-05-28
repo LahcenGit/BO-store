@@ -256,7 +256,7 @@
                         </ul>
                     </li>
 
-                    <li class="nav-label">Formateurs</li>
+                    <li class="nav-label">Produits</li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -266,14 +266,14 @@
                                 <path d="M7.00036205,16.4995035 C7.21569918,13.5165724 9.36772908,12 11.9907452,12 C14.6506758,12 16.8360465,13.4332455 16.9988413,16.5 C17.0053266,16.6221713 16.9988413,17 16.5815,17 C14.5228466,17 11.463736,17 7.4041679,17 C7.26484009,17 6.98863236,16.6619875 7.00036205,16.4995035 Z" fill="#000000" opacity="0.3"/>
                             </g>
                         </svg>
-							<span class="nav-text">Formateurs</span>
+							<span class="nav-text">Produits</span>
 						</a>
                         <ul aria-expanded="false">
                           
                             
                                 <ul aria-expanded="false">
-                                    <li><a href="{{url('/dashboard-admin/instructors/create')}}">Ajouter</a></li>
-                                    <li><a href="{{url('/dashboard-admin/instructors')}}">liste des formateurs</a></li>
+                                    <li><a href="{{url('/dashboard-admin/products/create')}}">Ajouter</a></li>
+                                    <li><a href="{{url('/dashboard-admin/products')}}">liste des formateurs</a></li>
                                     
                                 </ul>
                             </li>
@@ -281,11 +281,7 @@
 							
                         </ul>
                     </li>
-                    
-                  
-
-					
-					<li class="nav-label">Formations</li>
+                    <li class="nav-label">Commandes</li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                        
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
@@ -295,40 +291,16 @@
                                 <path d="M6,18 L9,18 C9.66666667,18.1143819 10,18.4477153 10,19 C10,19.5522847 9.66666667,19.8856181 9,20 L4,20 L4,15 C4,14.3333333 4.33333333,14 5,14 C5.66666667,14 6,14.3333333 6,15 L6,18 Z M18,18 L18,15 C18.1143819,14.3333333 18.4477153,14 19,14 C19.5522847,14 19.8856181,14.3333333 20,15 L20,20 L15,20 C14.3333333,20 14,19.6666667 14,19 C14,18.3333333 14.3333333,18 15,18 L18,18 Z M18,6 L15,6 C14.3333333,5.88561808 14,5.55228475 14,5 C14,4.44771525 14.3333333,4.11438192 15,4 L20,4 L20,9 C20,9.66666667 19.6666667,10 19,10 C18.3333333,10 18,9.66666667 18,9 L18,6 Z M6,6 L6,9 C5.88561808,9.66666667 5.55228475,10 5,10 C4.44771525,10 4.11438192,9.66666667 4,9 L4,4 L9,4 C9.66666667,4 10,4.33333333 10,5 C10,5.66666667 9.66666667,6 9,6 L6,6 Z" fill="#000000" fill-rule="nonzero"/>
                             </g>
                         </svg>
-							<span class="nav-text">Formations</span>
+							<span class="nav-text">Commande</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="{{url('/dashboard-admin/courses/create')}}">Ajouter</a></li>
-							<li><a href="{{url('/dashboard-admin/courses')}}">Liste des formations</a></li>
+                         
+							<li><a href="{{url('/dashboard-admin/orders')}}">Liste des commandes</a></li>
                         </ul>
                     </li>
                     
                    <li>
-                       
-                    <li class="nav-label">Inscriptions</li>
-                   </li>
-                    <li><a href="{{url('dashboard-admin/registrations')}}" class="ai-icon" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <rect x="0" y="0" width="24" height="24"/>
-                                <rect fill="#000000" opacity="0.3" x="4" y="4" width="8" height="16"/>
-                                <path d="M6,18 L9,18 C9.66666667,18.1143819 10,18.4477153 10,19 C10,19.5522847 9.66666667,19.8856181 9,20 L4,20 L4,15 C4,14.3333333 4.33333333,14 5,14 C5.66666667,14 6,14.3333333 6,15 L6,18 Z M18,18 L18,15 C18.1143819,14.3333333 18.4477153,14 19,14 C19.5522847,14 19.8856181,14.3333333 20,15 L20,20 L15,20 C14.3333333,20 14,19.6666667 14,19 C14,18.3333333 14.3333333,18 15,18 L18,18 Z M18,6 L15,6 C14.3333333,5.88561808 14,5.55228475 14,5 C14,4.44771525 14.3333333,4.11438192 15,4 L20,4 L20,9 C20,9.66666667 19.6666667,10 19,10 C18.3333333,10 18,9.66666667 18,9 L18,6 Z M6,6 L6,9 C5.88561808,9.66666667 5.55228475,10 5,10 C4.44771525,10 4.11438192,9.66666667 4,9 L4,4 L9,4 C9.66666667,4 10,4.33333333 10,5 C10,5.66666667 9.66666667,6 9,6 L6,6 Z" fill="#000000" fill-rule="nonzero"/>
-                            </g>
-                        </svg>
-						<span class="nav-text">Liste des inscriptions</span>
-					</a></li>
-
-					<li class="nav-label">Setting</li>
-                    <li><a href="#" class="ai-icon" aria-expanded="false">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <rect x="0" y="0" width="24" height="24"/>
-                                <path d="M5,8.6862915 L5,5 L8.6862915,5 L11.5857864,2.10050506 L14.4852814,5 L19,5 L19,9.51471863 L21.4852814,12 L19,14.4852814 L19,19 L14.4852814,19 L11.5857864,21.8994949 L8.6862915,19 L5,19 L5,15.3137085 L1.6862915,12 L5,8.6862915 Z M12,15 C13.6568542,15 15,13.6568542 15,12 C15,10.3431458 13.6568542,9 12,9 C10.3431458,9 9,10.3431458 9,12 C9,13.6568542 10.3431458,15 12,15 Z" fill="#000000"/>
-                            </g>
-                        </svg>
-						<span class="nav-text">Setting</span>
-					</a></li>
-                </ul>
+                 </ul>
             </div>
 
 

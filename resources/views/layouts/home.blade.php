@@ -89,13 +89,21 @@
                                                 <div class="tbr-info">
                                                     <span>تسجيل الدخول <i class="fa fa-caret-down"></i></span>
                                                     <div class="tbr-inner">
-                                                        <a href="my-account.html">حسابي</a>
-                                                        <a href="login-page.html">تسجيل الدخول</a>
+                                                        @if (Route::has('login'))
+                                                       
+                                                            @auth
+                                                            <a href="{{url('dashboard-admin')}}">حسابي</a>
+                                                            @else
+                                                            <a href="{{ route('login') }}" >تسجيل الدخول</a>
+                                                           @endauth
+                                                      
+                                                    @endif
+                                                      
+                                                       
                                                     </div>
                                                 </div>
                                             </li>
-                                            
-                                        </ul>
+                                         </ul>
                                     </div>
                                 </div>
                             </div>

@@ -357,6 +357,12 @@
                                                                     <input class="input-text required-entry validate-email"  name="adresse"  type="text" required>
                                                                 </div>
                                                             </li>
+                                                            <li>
+                                                                <label for="login-email" class="required"> الكمية <em>*</em></label>
+                                                                <div class="input-box">
+                                                                    <input class="input-text required-entry validate-email"  name="qte"  type="number" required>
+                                                                </div>
+                                                            </li>
                                                             <div class="single-form">
                                    
                                                                 <input type="hidden"  name="product" value="{{$product->id}}">
