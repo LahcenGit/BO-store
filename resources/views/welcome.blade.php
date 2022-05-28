@@ -73,11 +73,12 @@
                             <p>اكتشفوا منتجات الأجواد الجديدة الطبيعية ذات الجودة العالية</p>
                         </div>
                         <div class="product-carousel3">
+                            @foreach($products as $product)
                             <div class="pc-wrap">
                                 <div class="product-item">
                                     <div class="item-thumb">
                                         <span class="badge new">الجديد</span>
-                                        <img src="{{asset('Template/images/products/fashion/epice1.png')}}" class="img-responsive" alt=""/>
+                                        <img src="{{asset('storage/'.$product->photo)}}" class="img-responsive" alt=""/>
                                         <div class="overlay-rmore fa fa-search quickview" data-toggle="modal" data-target="#myModal"></div>
                                         <div class="product-overlay">
                                             <a href="#" class="addcart fa fa-shopping-cart"></a>
@@ -86,111 +87,15 @@
                                         </div>
                                     </div>
                                     <div class="product-info">
-                                        <h4 class="product-title"><a href="{{url('commande')}}">كسكس الأجواد</a></h4>
-                                        <span class="product-price"> <b> د.ج 1.000 </b>   </span>
+                                        <h4 class="product-title"><a href="{{url('commande')}}">{{$product->name}}</a></h4>
+                                        <span class="product-price"> <b>  {{$product->price}} دج </b>   </span>
                                         <button type="button" class="btn btn-danger">أطلب الان</button>
                                         
                                     </div>
                                 </div>
                             </div>
-                            <div class="pc-wrap">
-                                <div class="product-item">
-                                    <div class="item-thumb">
-                                        <img src="{{asset('Template/images/products/fashion/epice2.png')}}" class="img-responsive" alt=""/>
-                                        <div class="overlay-rmore fa fa-search quickview" data-toggle="modal" data-target="#myModal"></div>
-                                        <div class="product-overlay">
-                                            <a href="#" class="addcart fa fa-shopping-cart"></a>
-                                            <a href="#" class="compare fa fa-signal"></a>
-                                            <a href="#" class="likeitem fa fa-heart-o"></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-info">
-                                        <h4 class="product-title"><a href="{{url('commande')}}">زيت الزيتون الطبيعي</a></h4>
-                                        <span class="product-price"> <b> د.ج 1.000 </b>   </span>
-                                        <button type="button" class="btn btn-danger">أطلب الان</button>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pc-wrap">
-                                <div class="product-item">
-                                    <div class="item-thumb">
-                                        
-                                        <img src="{{asset('Template/images/products/fashion/epice3.png')}}" class="img-responsive" alt=""/>
-                                        <div class="overlay-rmore fa fa-search quickview" data-toggle="modal" data-target="#myModal"></div>
-                                        <div class="product-overlay">
-                                            <a href="#" class="addcart fa fa-shopping-cart"></a>
-                                            <a href="#" class="compare fa fa-signal"></a>
-                                            <a href="#" class="likeitem fa fa-heart-o"></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-info">
-                                        <h4 class="product-title"><a href="{{url('commande')}}">كبسولات السكر</a></h4>
-                                        <span class="product-price"> <b> د.ج 1.000 </b>   </span>
-                                        <button type="button" class="btn btn-danger">أطلب الان</button>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pc-wrap">
-                                <div class="product-item">
-                                    <div class="item-thumb">
-                                        <span class="badge new">الجديد</span>
-                                        <img src="{{asset('Template/images/products/fashion/epice1.png')}}" class="img-responsive" alt=""/>
-                                        <div class="overlay-rmore fa fa-search quickview" data-toggle="modal" data-target="#myModal"></div>
-                                        <div class="product-overlay">
-                                            <a href="#" class="addcart fa fa-shopping-cart"></a>
-                                            <a href="#" class="compare fa fa-signal"></a>
-                                            <a href="#" class="likeitem fa fa-heart-o"></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-info">
-                                        <h4 class="product-title"><a href="{{url('commande')}}">كسكس الأجواد</a></h4>
-                                        <span class="product-price"> <b> د.ج 1.000 </b>   </span>
-                                        <button type="button" class="btn btn-danger">أطلب الان</button>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pc-wrap">
-                                <div class="product-item">
-                                    <div class="item-thumb">
-                                        <img src="{{asset('Template/images/products/fashion/epice2.png')}}" class="img-responsive" alt=""/>
-                                        <div class="overlay-rmore fa fa-search quickview" data-toggle="modal" data-target="#myModal"></div>
-                                        <div class="product-overlay">
-                                            <a href="#" class="addcart fa fa-shopping-cart"></a>
-                                            <a href="#" class="compare fa fa-signal"></a>
-                                            <a href="#" class="likeitem fa fa-heart-o"></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-info">
-                                        <h4 class="product-title"><a href="{{url('commande')}}">زيت الزيتون الطبيعي</a></h4>
-                                        <span class="product-price"> <b> د.ج 1.000 </b>   </span>
-                                        <button type="button" class="btn btn-danger">أطلب الان</button>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pc-wrap">
-                                <div class="product-item">
-                                    <div class="item-thumb">
-                                        
-                                        <img src="{{asset('Template/images/products/fashion/epice3.png')}}" class="img-responsive" alt=""/>
-                                        <div class="overlay-rmore fa fa-search quickview" data-toggle="modal" data-target="#myModal"></div>
-                                        <div class="product-overlay">
-                                            <a href="#" class="addcart fa fa-shopping-cart"></a>
-                                            <a href="#" class="compare fa fa-signal"></a>
-                                            <a href="#" class="likeitem fa fa-heart-o"></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-info">
-                                        <h4 class="product-title"><a href="{{url('commande')}}">كبسولات السكر</a></h4>
-                                        <span class="product-price"> <b> د.ج 1.000 </b>   </span>
-                                        <button type="button" class="btn btn-danger">أطلب الان</button>
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                           
+                            @endforeach
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,10 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
+Route::resource('/',HomeController::class);
 Route::get('/commande', function () {
     return view('add-commande');
 });
@@ -24,3 +27,5 @@ Route::get('/commande', function () {
 Route::get('/dashboard-admin', function () {
     return view('admin.dashboard-admin');
 });
+Route::resource('/dashboard-admin/category',CategoryController::class);
+Route::resource('/dashboard-admin/products',ProductController::class);
