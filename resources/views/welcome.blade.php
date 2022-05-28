@@ -87,7 +87,7 @@
                                         </div>
                                     </div>
                                     <div class="product-info">
-                                        <h4 class="product-title"><a href="">{{$product->name}}</a></h4>
+                                        <h4 class="product-title"><a href="{{url('detail-product/'.$product->id)}}">{{$product->name}}</a></h4>
                                         <span class="product-price"> <b>  {{$product->price}} دج </b>   </span>
                                         <a href="{{url('order-product/'.$product->id)}}" class="btn btn-danger">أطلب الان</a>
                                         

@@ -41,4 +41,9 @@ class ProductController extends Controller
          }
         $product->save();
     }
+
+    public function detail($id){
+        $product = Product::find($id);
+        return view('detail-product',compact('product'));
+    }
 }
