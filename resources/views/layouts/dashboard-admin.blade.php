@@ -273,7 +273,7 @@
                             
                                 <ul aria-expanded="false">
                                     <li><a href="{{url('/dashboard-admin/products/create')}}">Ajouter</a></li>
-                                    <li><a href="{{url('/dashboard-admin/products')}}">liste des formateurs</a></li>
+                                    <li><a href="{{url('/dashboard-admin/products')}}">liste des produits</a></li>
                                     
                                 </ul>
                             </li>

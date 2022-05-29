@@ -41,8 +41,8 @@
 									<div class="card-body pb-0 px-3 pt-2">
 										<div class="row">
 											<div class="col">
-												<h5 class="mb-1">{{$revenue->s}} Da</h5>
-												<span class="text-success">Produits</span>
+												<h5 class="mb-1">{{ number_format($revenue->s, 2) }}  Da</h5>
+												<span class="text-success">Revenu</span>
 											</div>
 										</div>
 									</div>

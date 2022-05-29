@@ -40,10 +40,21 @@ class ProductController extends Controller
             
          }
         $product->save();
+        return redirect("dashboard-admin/products");
     }
 
     public function detail($id){
         $product = Product::find($id);
-        return view('detail-product',compact('product'));
+        $categories = Category::all();
+        return view('detail-product',compact('product','categories'));
     }
+
+    public function categoryProducts($id){
+
+        $products = Product::where('categorie_id',$id)->get();
+        $categories = Category::all();
+        $category = Category::find($id);
+        return view('category-product',compact('products','categories','category'));
+
+     }
 }

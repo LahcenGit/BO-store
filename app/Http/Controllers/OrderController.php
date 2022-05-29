@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Wilaya;
@@ -17,7 +18,8 @@ class OrderController extends Controller
     public function order($id){
         $product = Product::find($id);
         $wilayas = Wilaya::all();
-        return view('order-product',compact('product','wilayas'));
+        $categories = Category::all();
+        return view('order-product',compact('product','wilayas','categories'));
     }
 
     public function store(Request $request){

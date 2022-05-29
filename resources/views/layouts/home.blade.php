@@ -97,9 +97,7 @@
                                                             <a href="{{ route('login') }}" >تسجيل الدخول</a>
                                                            @endauth
                                                       
-                                                    @endif
-                                                      
-                                                       
+                                                         @endif
                                                     </div>
                                                 </div>
                                             </li>
@@ -125,45 +123,15 @@
                             </div>
                             <!-- Cart & Search -->
                             <div class="header-xtra pull-right">
-                                <div class="topcart">
-                                    <span><i class="fa fa-shopping-cart"></i></span>
-                                    <div class="cart-info">
-                                        <small>You have <em class="highlight">3 item(s)</em> in your shopping bag</small>
-                                        <div class="ci-item">
-                                            <img src="{{asset('Template/images/products/fashion/8.jpg')}}" width="80" alt=""/>
-                                            <div class="ci-item-info">
-                                                <h5><a href="./single-product.html">Product fashion</a></h5>
-                                                <p>2 x $250.00</p>
-                                                <div class="ci-edit">
-                                                    <a href="#" class="edit fa fa-edit"></a>
-                                                    <a href="#" class="edit fa fa-trash"></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="ci-item">
-                                            <img src="{{asset('Template/images/products/fashion/15.jpg')}}" width="80" alt=""/>
-                                            <div class="ci-item-info">
-                                                <h5><a href="./single-product.html">Product fashion</a></h5>
-                                                <p>2 x $250.00</p>
-                                                <div class="ci-edit">
-                                                    <a href="#" class="edit fa fa-edit"></a>
-                                                    <a href="#" class="edit fa fa-trash"></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="ci-total">Subtotal: $750.00</div>
-                                        <div class="cart-btn">
-                                            <a href="#">View Bag</a>
-                                            <a href="#">Checkout</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <div class="topsearch">
                                     <span>
                                         <i class="fa fa-search"></i>
                                     </span>
-                                    <form class="searchtop">
-                                        <input type="text" placeholder="Search entire store here.">
+                                    <form action="{{asset('search')}}" method="GET">
+                                        @csrf
+                                        <input type="text" name="keyword" placeholder="Search entire store here.">
+                                       
                                     </form>
                                 </div>
                             </div>
@@ -174,71 +142,15 @@
                                         <a href="./index.html" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-expanded="false">الرئيسية</a>
                                     </li>
                                     
-                                    <li class="dropdown">
-                                        <a href="./categories-grid.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">التصنيفات</a>
-                                        <ul class="dropdown-menu submenu" role="menu">
-                                            <li><a href="./categories-grid.html">Shop - Grid 1</a>
-                                            <li><a href="./categories-list.html">Shop - Grid 2</a>
-                                            <li><a href="./single-product.html">Shop - Single</a></li>
-                                            <li><a href="./shoppingcart.html">Shopping Cart</a></li>
-                                            <li><a href="./checkout.html">Checkout 1</a></li>
-                                            <li><a href="./checkout-2.html">Checkout 2</a></li>
-                                            <li><a href="./checkout-2-leftside.html">Checkout Left Sidebar</a></li> 
-                                        </ul>
+                                    @foreach($categories as $category)
+                                    <li >
+                                        <a href="{{asset('category-products/'.$category->id)}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{$category->name}}</a>
+                                       
                                     </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">توابل</a>
-                                        <ul class="dropdown-menu submenu" role="menu">
-                                            <li><a href="./blog.html">Blog Posts</a>
-                                            <li><a href="./blog-single.html">Blog Single</a>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">أعشاب</a>
-                                        <ul class="dropdown-menu submenu" role="menu">
-                                            <li><a href="#">Nam ipsum est</a>
-                                            <li><a href="#">Volutpat</a>
-                                            <li><a href="#">In efficitur in</a></li>
-                                            <li><a href="#">Accumsan eget</a></li>
-                                            <li><a href="#">Odio</a></li>
-                                            <li><a href="#">Curabitur</a></li>
-                                            <li><a href="#">Phasellus</a></li>
-                                            <li><a href="#">Dapibus elit</a></li>
-                                            <li><a href="#">Nurna ullamcorper</a></li>
-                                            <li><a href="#">Lobortis</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">منتجات جديدة</a>
-                                        <ul class="dropdown-menu submenu" role="menu">
-                                            <li><a href="#">Nam ipsum est</a>
-                                            <li><a href="#">Volutpat</a>
-                                            <li><a href="#">In efficitur in</a></li>
-                                            <li><a href="#">Accumsan eget</a></li>
-                                            <li><a href="#">Odio</a></li>
-                                            <li><a href="#">Curabitur</a></li>
-                                            <li><a href="#">Phasellus</a></li>
-                                            <li><a href="#">Dapibus elit</a></li>
-                                            <li><a href="#">Nurna ullamcorper</a></li>
-                                            <li><a href="#">Lobortis</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">اتصل بنا</a>
-                                        <ul class="dropdown-menu submenu" role="menu">                                         
-                                            <li><a href="contact-1.html">Contact Style 1</a></li>
-                                            <li><a href="contact-2.html">Contact Style 2</a></li>
-                                            <li><a href="account-information.html"> Account Information </a></li>
-                                            <li><a href="my-account.html">My Account</a></li>                                        
-                                            <li><a href="cng-pw.html">Change Password</a></li>
-                                            <li><a href="address-book.html">Address Books</a></li>
-                                            <li><a href="order-history.html">Order History</a></li>
-                                            <li><a href="review-rating.html">Reviews and Ratings</a></li>
-                                            <li><a href="return.html">Returns Requests</a></li>
-                                            <li><a href="newsletter.html">Newsletter</a></li>
-                                            <li><a href="myaccount-leftsidebar.html">Left Sidebar</a></li>
-                                        </ul>
-                                    </li>
+                                    
+                                    @endforeach
+                                    
+                                   
                                 </ul>
                             </div>
                         </div>
@@ -266,11 +178,9 @@
                         <div class="col-md-3 widget-footer">
                             <h5>الفئات</h5>
                             <ul class="widget-tags">
-                                <li><a href="./categories-grid.html">التوابل</a></li>
-                                <li><a href="./categories-grid.html">البهارات</a></li>
-                                <li><a href="./categories-grid.html">فاكهة مجففة</a></li>
-                                <li><a href="./categories-grid.html">مكمل غذائي</a></li>
-                                <li><a href="./categories-grid.html">الزيوت الطبيعية</a></li>
+                                @foreach($categories as $category)
+                                <li><a href="{{asset('category-products/'.$category->id)}}">{{$category->name}}</a></li>
+                                @endforeach
                                 
                             </ul>
                         </div>
@@ -307,106 +217,7 @@
     <!-- Newsletter -->
    
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
-                <div class="row">
-                    <div class="col-md-5">
-                        <div class="ps-slider">
-                            <div class="ps-img1">
-                                <img src="images/products/single/1.jpg" alt="">
-                            </div>
-                            <div class="ps-img2">
-                                <img src="images/products/single/2.jpg" alt="">
-                            </div>
-                            <div class="ps-img3">
-                                <img src="images/products/single/3.jpg" alt="">
-                            </div>
-                            <div class="ps-img4">
-                                <img src="images/products/single/4.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="ps-slider-nav">
-                            <ul>
-                                <li id="ps-img1"><img src="images/products/single/1.jpg" class="img-responsive" alt=""></li>
-                                <li id="ps-img2"><img src="images/products/single/2.jpg" class="img-responsive" alt=""></li>
-                                <li id="ps-img3"><img src="images/products/single/3.jpg" class="img-responsive" alt=""></li>
-                                <li id="ps-img4"><img src="images/products/single/4.jpg" class="img-responsive" alt=""></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="product-single">
-                            <div class="ps-header">
-                                <span class="badge offer">-50%</span>
-                                <h3>Product fashion</h3>
-                                <span class="ratings-wrap">
-                                    <div class="ratings">
-                                        <span class="act fa fa-star"></span>
-                                        <span class="act fa fa-star"></span>
-                                        <span class="act fa fa-star"></span>
-                                        <span class="act fa fa-star"></span>
-                                        <span class="act fa fa-star"></span>
-                                    </div>
-                                    <em>(6 reviews)</em>
-                                </span>
-                                <div class="ps-price"><span>$ 200.00</span> $ 99.00</div>
-                            </div>
-
-                            <div class="ps-stock">
-                                Available: <a href="#">In Stock</a>
-                            </div>
-                            <div class="sep"></div>
-                            <div class="ps-color">
-                                <p>Color<span>*</span></p>
-                                <a class="black" href="#" onclick="return false;"></a>
-                                <a class="red" href="#" onclick="return false;"></a>
-                                <a class="yellow" href="#" onclick="return false;"></a>
-                                <a class="darkgrey" href="#" onclick="return false;"></a>
-                                <a class="litebrown" href="#" onclick="return false;"></a>
-                            </div>
-                            <div class="space10"></div>
-                            <div class="row select-wraps">
-                                <div class="col-md-7">
-                                    <p>Size<span>*</span></p>
-                                    <select>
-                                        <option>XL</option>
-                                        <option>XXL</option>
-                                        <option>XXXL</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-5">
-                                    <p>Quantity<span>*</span></p>
-                                    <select>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="space20"></div>
-                            <div class="share">
-                                <span>
-                                    <a href="#" class="fa fa-heart-o" onclick="return false;"></a>
-                                    <a href="#" class="fa fa-signal" onclick="return false;"></a>
-                                    <a href="#" class="fa fa-envelope-o" onclick="return false;"></a>
-                                </span>
-                                <div class="addthis_native_toolbox"></div>
-                            </div>
-                            <div class="space20"></div>
-                            <div class="sep"></div>
-                            <a class="btn-color" href="#">Add to Bag</a>
-                            <a class="btn-black" href="#">Go to Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
 
     <div id="backtotop"><i class="fa fa-chevron-up"></i></div>
 

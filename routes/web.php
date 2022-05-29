@@ -25,12 +25,13 @@ Route::resource('/',HomeController::class);
 
 Auth::routes();
 
-
-Route::resource('/dashboard-admin',AdminController::class);
 Route::resource('/dashboard-admin/category',CategoryController::class);
 Route::resource('/dashboard-admin/products',ProductController::class);
 Route::resource('/dashboard-admin/orders',OrderController::class);
 Route::resource('/order-products',OrderController::class);
+Route::resource('/dashboard-admin',AdminController::class);
 Route::get('/order-product/{id}',[App\Http\Controllers\OrderController::class,'order']);
 Route::get('/detail-product/{id}',[App\Http\Controllers\ProductController::class,'detail']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home']);
+Route::get('/category-products/{id}',[App\Http\Controllers\ProductController::class,'categoryProducts']);
+Route::get('/search',[App\Http\Controllers\SearchController::class,'globalSearch']);

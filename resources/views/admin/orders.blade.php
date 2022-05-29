@@ -42,7 +42,8 @@
                                         <th>Adresse</th>
                                         <th>Numéro</th>
                                         <th>Produit</th>
-                                        <th>Prix</th>
+                                        <th>Qte</th>
+                                        <th>Total</th>
                                         <th>Date</th>
                                         <th>Statut</th>
                                         <th>Action</th>
@@ -61,7 +62,8 @@
                                     <td>{{$order->adresse}}</td>
                                     <td>{{$order->phone}}</td>
                                     <td>{{$order->product->name}}</td>
-                                    <td>{{$order->product->prix}}</td>
+                                    <td>{{$order->qte}}</td>
+                                    <td>{{ number_format($order->total, 2) }}  Da</td>
                                     <td>{{$order->created_at}}</td>
                                     @if ($order->status == 'En Attente' )
                                     <td><span class="badge badge-warning">En Attente</span></td>
