@@ -11,19 +11,17 @@ use Illuminate\Http\Request;
 class OrderController extends Controller
 {
     //
+    
+   
     public function index(){
         $orders = Order::with('product','wilaya')->get();
         return view('admin.orders',compact('orders'));
     }
-    public function order($id){
-        $product = Product::find($id);
-        $wilayas = Wilaya::all();
-        $categories = Category::all();
-        return view('order-product',compact('product','wilayas','categories'));
-    }
+  
 
     public function store(Request $request){
         $order = new Order();
+        $categories = Category::all();
         $product = Product::where('id',$request->product)->first();
         $order->product_id = $request->product;
         $order->firstname =  $request->firstname;
@@ -36,7 +34,7 @@ class OrderController extends Controller
         $order->total = $request->qte * $product->price;
         $order->save();
         $name = $request->firstname;
-        return view('order-success',compact('name'));
+        return view('order-success',compact('name','categories'));
     }
 
     public function edit($id){
@@ -48,6 +46,12 @@ class OrderController extends Controller
         $order = Order::find($id);
         $order->status = $request->status;
         $order->save();
+        return redirect('dashboard-admin/orders');
+    }
+
+    public function destroy($id){
+        $order = Order::find($id);
+        $order->delete();
         return redirect('dashboard-admin/orders');
     }
 }
