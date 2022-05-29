@@ -79,7 +79,7 @@
                                     <div class="item-thumb">
                                         <span class="badge new">الجديد</span>
                                         <img src="{{asset('storage/'.$product->photo)}}" class="img-responsive" alt=""/>
-                                        <div class="overlay-rmore fa fa-search quickview" data-toggle="modal" data-target="#myModal"></div>
+                                       <a href="{{url('/detail-product/'.$product->id)}}"> <div class="overlay-rmore fa fa-eye quickview" data-toggle="modal" data-target="#myModal"></div></a>
                                         <div class="product-overlay">
                                             <a href="#" class="addcart fa fa-shopping-cart"></a>
                                             <a href="#" class="compare fa fa-signal"></a>
