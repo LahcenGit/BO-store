@@ -2,7 +2,6 @@
 @section('content')
     
 <div class="space10"></div>
-
             <!-- MAIN CONTENT -->
             <div class="shop-single">
                 <div class="container">
@@ -32,14 +31,14 @@
                                                     <span class="act fa fa-star"></span>
                                                     <span class="act fa fa-star"></span>
                                                 </div>
-                                                <em>(5 reviews)</em>
                                             </div>
                                             <div class="ps-price">  {{$product->price}} دج </div>
                                         </div>
                                         <p>{{$product->description}}</p>
+                                     
+                                       
                                         <div class="space10"></div>
-                                        
-                                        <a class="addtobag" href="{{url('order-product/'.$product->id)}}">أطلب الان</a>
+                                        <a class="addtobag" href="{{url('order-product/'.$product->id)}}" style="font-family: 'Cairo', sans-serif; font-size:18px;">أطلب الان</a>
                                     </div>
                                 </div>
                             </div>
@@ -48,5 +47,7 @@
                 </div>
             </div>
 
+            <div class="clearfix space20"></div>
+            <div class="clearfix space20"></div>
             <div class="clearfix space20"></div>
 @endsection

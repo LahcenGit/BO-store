@@ -112,25 +112,31 @@
                         <div class="col-md-3">
                             <div class="pi-wrap text-center">
                                 <i class="fa fa-money"></i>
-                                <h4 style="font-family: font-family: 'Cairo', sans-serif!important;">تخلص كي توصلك السلعة<span>إشتري بكل ثقة وأمان</span></h4>
+                                <h4 >تخلص كي توصلك السلعة</h4>
+                                <h6>إشتري بكل ثقة وأمان</h6>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="pi-wrap text-center">
                                 <i class="fa fa-life-ring"></i>
-                                <h4>خدمة زبائن VIP<span>من 9 صباحاً إلى 8 مساءاً</span></h4>
+                                <h4>خدمة زبائن VIP</h4>
+                                <h6>من 9 صباحاً إلى 8 مساءاً</h6>
                             </div>
                         </div>
+
                         <div class="col-md-3">
                             <div class="pi-wrap text-center">
                                 <i class="fa fa-clock-o"></i>
-                                <h4>توصيل سريع من 3/1 أيام<span>خطوات سهلة وبسيطة</span></h4>
+                                <h4>توصيل سريع من 3/1 أيام</h4>
+                                <h6>خطوات سهلة وبسيطة</h6>
                             </div>
                         </div>
+
                         <div class="col-md-3">
                             <div class="pi-wrap text-center">
-                                <i  class="fa fa-plane"></i>
-                                <h4>إستبدال وإسترجاع مجاني<span>حقك 100% مضمون معنا!</span></h4>
+                                <i  class="fas fa-exchange"></i>
+                                <h4>إستبدال وإسترجاع مجاني</h4>
+                                <h6>حقك 100% مضمون معنا!</h6>
                             </div>
                         </div>
                     </div>

@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>BO</title>
+        <title>توابل الأجواد</title>
 
         <!-- Mobile Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,6 +37,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="{{asset('icon-bo.png')}}">
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -49,6 +50,35 @@
         html * {
         font-family: 'Cairo', sans-serif;
         }
+
+        .ps-price {
+        font-size: 23px;
+        color: #333;
+        font-weight: 600;
+        font-family: 'Cairo', sans-serif;
+        margin: 0 0 10px;
+        }
+
+        .product-single h3 {
+            font-size: 23px;
+        color: #333;
+        font-weight: 600;
+        font-family: 'Cairo', sans-serif;
+        }
+
+        .bcrumbs {
+        background: #f0f0f0;
+        padding: 20px 0;
+        margin-bottom: 45px;
+        }
+        .navbar > .container .navbar-brand {
+        margin-left: 0px;
+        margin-right: 0;
+        margin-top: -30px;
+        }
+
+      
+    
     </style>
     <body>
 
@@ -109,33 +139,21 @@
                                     <span class="icon-bar"></span>
                                 </button>
                                 <!-- Logo -->
-                                <a class="navbar-brand" href="./index.html"><img src="images/basic/logo.png" class="img-responsive" alt=""/></a>
+                                <a class="navbar-brand" href="./index.html"><img src="{{asset('Template/images/basic/logo-bo.png')}}" class="img-responsive" style="height: 100px!important;" alt=""/></a>
                             </div>
 
                             <!-- Cart & Search -->
-                            <div class="header-xtra pull-right">
-                                <div class="topsearch">
-                                    <span>
-                                        <i class="fa fa-search"></i>
-                                    </span>
-                                    <form action="{{asset('search')}}" method="GET">
-                                        @csrf
-                                        <input type="text" name="keyword" placeholder="Search entire store here.">
-                                       
-                                    </form>
-                                </div>
-                            </div>
-
+                           
                             <!-- Navmenu -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav navbar-left">
                                     <li class="dropdown">
-                                        <a href="./index.html" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-expanded="false">الرئيسية</a>
+                                        <a href="{{asset('/')}}" >الرئيسية</a>
                                     </li>
                                     
                                     @foreach($categories as $category)
                                     <li >
-                                        <a href="{{asset('category-products/'.$category->id)}}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{$category->name}}</a>
+                                        <a href="{{asset('category-products/'.$category->id)}}" >{{$category->name}}</a>
                                        
                                     </li>
                                     
@@ -153,9 +171,7 @@
             <div class="bcrumbs">
                 <div class="container">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">New Arrivals</a></li>
-                        <li>Product Fashion</li>
+                      
                     </ul>
                 </div>
             </div>
@@ -187,14 +203,7 @@
                                 
                             </ul>
                         </div>
-                        <div class="col-md-3 widget-footer">
-                            <h5>Newsletter</h5>
-                            <p>Sign up for our newsletter and promotions</p>
-                            <form class="newsletter">
-                                <input type="text" placeholder="Enter your email address here.">
-                                <button type="submit">Subscribe !</button>
-                            </form>
-                        </div>
+                       
                     </div>
                 </div>
             </footer>
@@ -204,8 +213,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-7">
-                           
-                            <p>Copyright 2015 &middot; Designed & Developed by <a href="#">jThemes Studio.</a> All rights reserved</p>
+                          
+                            <p>Copyright 2022 &middot; Designed & Developed by <a href="#">InnoDev</a> </p>
                         </div>
                         <div class="col-md-5">
                             <img src="images/basic/payment.png" class="pull-right img-responsive payment" alt=""/>

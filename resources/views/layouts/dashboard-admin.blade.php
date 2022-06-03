@@ -5,13 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>BO</title>
+    <title>توابل الأجواد</title>
 
 
 	<link href="{{asset('Dashboard/vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
 
     <!-- Favicon icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('icon.png')}}">
     <link href="{{asset('Dashboard/vendor/jqvmap/css/jqvmap.min.css')}}" rel="stylesheet">
 
 	<link rel="stylesheet" href="{{asset('Dashboard/vendor/chartist/css/chartist.min.css')}}">
@@ -27,6 +26,7 @@
 
 	<link rel="stylesheet" href="{{asset('Dashboard/uploader/pe-icon-7-stroke.css')}}">
 	<link rel="stylesheet" href="{{asset('Dashboard/uploader/drop_uploader.css')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('icon-bo.png')}}">
 
 	
 </head>
