@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\OrderProductController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CartController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +37,9 @@ Route::get('/detail-product/{id}',[App\Http\Controllers\OrderProductController::
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home']);
 Route::get('/category-products/{id}',[App\Http\Controllers\OrderProductController::class,'categoryProducts']);
 Route::get('/search',[App\Http\Controllers\SearchController::class,'globalSearch']);
+//cart Route
+
+Route::get('cart', [ProductController::class, 'cart'])->name('cart');
+Route::get('add-to-cart/{id}', [ProductController::class, 'addToCart'])->name('add.to.cart');
+Route::patch('update-cart', [ProductController::class, 'updateCart'])->name('update.cart');
+Route::delete('remove-from-cart', [ProductController::class, 'remove'])->name('remove.from.cart');

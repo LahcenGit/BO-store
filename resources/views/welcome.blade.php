@@ -91,6 +91,9 @@
                                         <span class="product-price"> <b>  {{$product->price}} دج </b>   </span>
                                         <a href="{{url('order-product/'.$product->id)}}" class="btn btn-danger">أطلب الان</a>
                                         
+                                            <a href="{{ route('add.to.cart', $product->id) }}" class="btn btn-primary">Add To Cart</a>
+                                       
+                                        
                                     </div>
                                 </div>
                             </div>
