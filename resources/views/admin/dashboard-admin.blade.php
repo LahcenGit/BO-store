@@ -41,7 +41,7 @@
 									<div class="card-body pb-0 px-3 pt-2">
 										<div class="row">
 											<div class="col">
-												<h5 class="mb-1">{{ number_format($revenue->s, 2) }}  Da</h5>
+												<h5 class="mb-1">{{ number_format($revenu->s, 2) }} Da</h5>
 												<span class="text-success">Revenu</span>
 											</div>
 										</div>
@@ -109,7 +109,6 @@
 														<th><strong>Wilaya</strong></th>
 														<th><strong>Adresse</strong></th>
 														<th><strong>Numéro</strong></th>
-														<th><strong>Produit</strong></th>
 														<th><strong>Status</strong></th>
 														
 													</tr>
@@ -128,7 +127,7 @@
 														<td>{{$order->wilaya->ar_name}}</td>
 														<td>{{$order->adresse}}</td>
 														<td>{{$order->phone}}</td>
-														<td>{{$order->product->name}}</td>
+														<td></td>
 														@if ($order->status == 'En Attente' )
 														<td><span class="badge badge-warning">En Attente</span></td>
 														@elseif($order->status == 'Validé')
@@ -141,9 +140,12 @@
 													
 													
 													@endforeach
+													
 												</tbody>
 											</table>
 										</div>
+										<a href="{{url('dashboard-admin/orders')}}"><p>Voir Toutes les commandes</p></a>
+
 									</div>
 								</div>
 							</div>

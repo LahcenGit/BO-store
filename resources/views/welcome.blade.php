@@ -89,9 +89,9 @@
                                     <div class="product-info">
                                         <h4 class="product-title"><a href="{{url('detail-product/'.$product->id)}}">{{$product->name}}</a></h4>
                                         <span class="product-price"> <b>  {{$product->price}} دج </b>   </span>
-                                        <a href="{{url('order-product/'.$product->id)}}" class="btn btn-danger">أطلب الان</a>
+                                        <a href="{{ route('order.to.cart', $product->id) }}" class="btn btn-danger">أطلب الان</a>
                                         
-                                            <a href="{{ route('add.to.cart', $product->id) }}" class="btn btn-primary">Add To Cart</a>
+                                            <a href="{{ route('add.to.cart', $product->id) }}" class="btn btn-primary">اضافة لسلة التسوق</a>
                                        
                                         
                                     </div>

@@ -33,13 +33,16 @@ Route::resource('/dashboard-admin/orders',OrderController::class)->middleware('c
 Route::resource('/order-products',OrderController::class);
 Route::resource('/dashboard-admin',AdminController::class)->middleware('can:admin');
 Route::get('/order-product/{id}',[App\Http\Controllers\OrderProductController::class,'order']);
+Route::post('/order-products-cart',[App\Http\Controllers\OrderProductController::class,'orderPanier']);
 Route::get('/detail-product/{id}',[App\Http\Controllers\OrderProductController::class,'detail']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home']);
 Route::get('/category-products/{id}',[App\Http\Controllers\OrderProductController::class,'categoryProducts']);
 Route::get('/search',[App\Http\Controllers\SearchController::class,'globalSearch']);
+Route::get('view-orderlines/{id}', [OrderController::class, 'orderLine']);
 //cart Route
 
-Route::get('cart', [ProductController::class, 'cart'])->name('cart');
-Route::get('add-to-cart/{id}', [ProductController::class, 'addToCart'])->name('add.to.cart');
-Route::patch('update-cart', [ProductController::class, 'updateCart'])->name('update.cart');
-Route::delete('remove-from-cart', [ProductController::class, 'remove'])->name('remove.from.cart');
+Route::get('cart', [CartController::class, 'cart'])->name('cart');
+Route::get('add-to-cart/{id}', [CartController::class, 'addToCart'])->name('add.to.cart');
+Route::get('order-to-cart/{id}', [CartController::class, 'orderToCart'])->name('order.to.cart');
+Route::patch('update-cart', [CartController::class, 'updateCart'])->name('update.cart');
+Route::delete('remove-from-cart', [CartController::class, 'remove'])->name('remove.from.cart');

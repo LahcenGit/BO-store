@@ -146,31 +146,33 @@
                             <div class="header-xtra pull-right">
                                 <div class="topcart">
                                     <span>{{ count((array) session('cart')) }}<i class="fa fa-shopping-cart"></i></span>
-                                    @php $total = 0 @endphp
+                                        @php $total = 0 @endphp
                                         @foreach((array) session('cart') as $id => $details)
                                             @php $total += $details['price'] * $details['quantity'] @endphp
                                         @endforeach
-                                    @if(session('cart'))
-                                    @foreach(session('cart') as $id => $details)  
                                     <div class="cart-info">
-                                       
+                                        <small>لديك <em class="highlight">{{ count((array) session('cart')) }}</em>  منتجات في حقيبة التسوق الخاصة بك  </small>
+                                        @if(session('cart'))
+                                        @foreach(session('cart') as $id => $details)  
                                         <div class="ci-item">
                                             <img src="{{asset('storage/'.$details['image'])}}" width="80" alt=""/>
                                             <div class="ci-item-info">
-                                                <h5><a href="./single-product.html">{{ $details['name'] }}</a></h5>
-                                                <p>{{ $details['price'] }} دج</p>
-                                                
+                                                <h5><a href="./single-product.html">{{$details['name']}}</a></h5>
+                                                <p> {{$details['price']}}دج  * {{$details['quantity']}}  </p>
+                                               
                                             </div>
                                         </div>
-                                       <div class="cart-btn">
-                                            <a href="#">View Bag</a>
+                                       
+                                        @endforeach
+                                        @endif
+                                        <div class="ci-total"> المجموع {{$total}} دج</div>
+                                        <div class="cart-btn">
+                                            <a href="#">سلة التسوق</a>
                                             <a href="#">Checkout</a>
                                         </div>
                                     </div>
-                                    @endforeach
-                                    @endif
                                 </div>
-                               
+                                
                             </div>
                             <!-- Navmenu -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -203,8 +205,21 @@
                     </ul>
                 </div>
             </div>
+            <div class="container">
 
-            @yield('content')
+                   @if(session('success'))
+            
+                    <div class="alert alert-success">
+            
+                      {{ session('success') }}
+            
+                    </div> 
+            
+                @endif
+                @yield('content')
+            
+            </div>
+            
 
              <!-- FOOTER -->
              <footer>

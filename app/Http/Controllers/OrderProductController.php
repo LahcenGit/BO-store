@@ -30,4 +30,13 @@ class OrderProductController extends Controller
         return view('category-product',compact('products','categories','category'));
 
      }
+     public function orderPanier(Request $request){
+        $products = $request->products;
+        $qtes = $request->qtes;
+        $prices = $request->prices;
+        $total = $request->total;
+        $wilayas = Wilaya::all();
+        $categories = Category::all();
+        return view('order-product',compact('products','wilayas','categories','qtes','prices','total'));
+     }
 }

@@ -137,7 +137,43 @@
                                 <a class="navbar-brand" href="{{asset('/')}}"><img src="{{asset('Template/images/basic/logo-bo.png')}}" class="img-responsive" style="height: 100px!important;" alt=""/></a>
                             </div>
                             <!-- Cart & Search -->
-                           
+                            <div class="header-xtra pull-right">
+                                <div class="topcart">
+                                    <span>{{ count((array) session('cart')) }}<i class="fa fa-shopping-cart"></i></span>
+                                        @php $total = 0 @endphp
+                                        @foreach((array) session('cart') as $id => $details)
+                                            @php $total += $details['price'] * $details['quantity'] @endphp
+                                        @endforeach
+                                        <form action="{{url('order-products-cart')}}" method="POST" enctype="multipart/form-data">
+                                            @csrf
+                                    <div class="cart-info">
+                                        <small>لديك <em class="highlight">{{ count((array) session('cart')) }}</em>  منتجات في حقيبة التسوق الخاصة بك  </small>
+                                        @if(session('cart'))
+                                        @foreach(session('cart') as $id => $details)  
+                                        <div class="ci-item">
+                                            <img src="{{asset('storage/'.$details['image'])}}" width="80" alt=""/>
+                                            <div class="ci-item-info">
+                                                <h5><a href="./single-product.html">{{$details['name']}}</a></h5>
+                                                <p> {{$details['price']}}دج  * {{$details['quantity']}}  </p>
+                                               
+                                            </div>
+                                        </div>
+                                        <input type="hidden" value="{{$details['name']}}" name="products[]">
+                                        <input type="hidden" value="{{$details['quantity']}}" name="qtes[]">
+                                        <input type="hidden" value="{{$details['price']}}" name="prices[]">
+                                        @endforeach
+                                        @endif
+                                        <div class="ci-total"> المجموع {{$total}} دج</div>
+                                        <input type="hidden" value="{{$total}}" name="total">
+                                        <div class="cart-btn">
+                                            <a href="{{url('/cart')}}">سلة التسوق</a>
+                                            <button type="submit" href="{{url('/order-products-cart')}}"> checkout </a>
+                                        </div>
+                                    </form>
+                                    </div>
+                                </div>
+                                
+                            </div>
                             <!-- Navmenu -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav navbar-left">

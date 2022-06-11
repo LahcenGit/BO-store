@@ -38,7 +38,7 @@
                                      
                                        
                                         <div class="space10"></div>
-                                        <a class="addtobag" href="{{url('order-product/'.$product->id)}}" style="font-family: 'Cairo', sans-serif; font-size:18px;">أطلب الان</a>
+                                        <a class="addtobag" href="{{ route('order.to.cart', $product->id) }}" style="font-family: 'Cairo', sans-serif; font-size:18px;">أطلب الان</a>
                                     </div>
                                 </div>
                             </div>

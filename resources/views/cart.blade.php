@@ -21,6 +21,8 @@
                         @if(session('cart'))
                             @foreach(session('cart') as $id => $details)
                                 @php $total += $details['price'] * $details['quantity'] @endphp
+                                <form action="{{url('order-products-cart')}}" method="POST" enctype="multipart/form-data">
+                                    @csrf
                                 <tr data-id="{{ $id }}">
                                     <td data-th="Product">
                                         <div class="row">
@@ -39,14 +41,25 @@
                                         <button class="btn btn-danger btn-sm remove-from-cart"><i class="fa fa-trash-o"></i></button>
                                     </td>
                                 </tr>
+                                
+                                <input type="hidden" value="{{$details['name']}}" name="products[]">
+                                <input type="hidden" value="{{$details['quantity']}}" name="qtes[]">
+                                <input type="hidden" value="{{$details['price']}}" name="prices[]">
                             @endforeach
                         @endif
                     </tbody>
                     <tfoot>
                         <tr>
                             <td colspan="5" class="text-left"><h3><strong>المجموع {{ $total }}دج</strong></h3></td>
+                            <input type="hidden" value="{{$total}}" name="total">
                         </tr>
-                        
+                        <tr>
+                            <td colspan="5" class="text-right">
+                                <button type="submit" class="btn btn-warning"><i class="fa fa-angle-left"></i> أطلب الان </button>
+                                
+                            </td>
+                        </form>
+                        </tr>
                     </tfoot>
                 </table>
                

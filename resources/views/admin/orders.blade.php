@@ -41,9 +41,6 @@
                                         <th>Wilaya</th>
                                         <th>Adresse</th>
                                         <th>Numéro</th>
-                                        <th>Produit</th>
-                                        <th>Qte</th>
-                                        <th>Total</th>
                                         <th>Date</th>
                                         <th>Statut</th>
                                         <th>Action</th>
@@ -61,9 +58,6 @@
                                     <td>{{$order->wilaya->name}}</td>
                                     <td>{{$order->adresse}}</td>
                                     <td>{{$order->phone}}</td>
-                                    <td>{{$order->product->name}}</td>
-                                    <td>{{$order->qte}}</td>
-                                    <td>{{ number_format($order->total, 2) }}  Da</td>
                                     <td>{{$order->created_at}}</td>
                                     @if ($order->status == 'En Attente' )
                                     <td><span class="badge badge-warning">En Attente</span></td>
@@ -74,11 +68,13 @@
                                     
                                     @endif
                                     <td>
-                                        <form action="{{url('dashboard-admin/orders/'.$order->id)}}" method="post">
-                                            {{csrf_field()}}
-                                            {{method_field('DELETE')}}
+                                        
                                         <div class="d-flex">
+                                            <button data-id="{{$order->id}}" class="btn btn-warning shadow btn-xs sharp mr-1 view-orderline"><i class="fa fa-eye"></i></button>
                                             <a href="{{url('dashboard-admin/orders/'.$order->id.'/edit')}}" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                            <form action="{{url('dashboard-admin/orders/'.$order->id)}}" method="post">
+                                                {{csrf_field()}}
+                                                {{method_field('DELETE')}}
                                             <button class="  btn btn-danger shadow btn-xs sharp" onclick="return confirm('Vous voulez vraiment supprimer?')"><i class="fa fa-trash"></i></button>
                                         </div>
                                         </form>												
@@ -96,4 +92,30 @@
        
 </div>
 </div>
+<div id="modal-orderline">
+
+</div>
 @endsection
+@push('modal-orderline-scripts')
+<script>
+  $.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
+$(".view-orderline").click(function() {
+  
+  var id = $(this).data('id');
+ 
+  $.ajax({
+    url: '/view-orderlines/'+id ,
+    type: "GET",
+    success: function (res) {
+      $('#modal-orderline').html(res);
+      $("#exampleModal").modal('show');
+    }
+  });
+  
+});
+</script>
+@endpush
