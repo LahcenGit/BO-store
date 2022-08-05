@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 class OrderController extends Controller
 {
     //
-    
+   
    
     public function index(){
         $orders = Order::with('wilaya')->get();
@@ -42,7 +42,7 @@ class OrderController extends Controller
            $orderline->total = $request->qtes[$i]*$product->price;
            $orderline->save();
           }
-        $name = $request->firstname;
+        $name = $request->lastname;
         return view('order-success',compact('name','categories'));
     }
 

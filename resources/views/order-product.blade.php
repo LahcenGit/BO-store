@@ -84,7 +84,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4 mt-2" style="background-color: #EFEFEF ; padding: 30px;">
+                        <div class="col-md-4 mt-4" style="background-color: #EFEFEF ; padding: 30px;">
                             <div class="mb-4">
                                 <b> تفاصيل طلبك :</b>
                             </div>

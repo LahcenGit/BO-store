@@ -139,7 +139,7 @@
                                     <span class="icon-bar"></span>
                                 </button>
                                 <!-- Logo -->
-                                <a class="navbar-brand" href="./index.html"><img src="{{asset('Template/images/basic/logo-bo.png')}}" class="img-responsive" style="height: 100px!important;" alt=""/></a>
+                                <a class="navbar-brand" href="#"><img src="{{asset('Template/images/basic/logo-bo.png')}}" class="img-responsive" style="height: 100px!important;" alt=""/></a>
                             </div>
 
                             <!-- Cart & Search -->
@@ -167,8 +167,8 @@
                                         @endif
                                         <div class="ci-total"> المجموع {{$total}} دج</div>
                                         <div class="cart-btn">
-                                            <a href="#">سلة التسوق</a>
-                                            <a href="#">Checkout</a>
+                                            <a href="{{url('/cart')}}">سلة التسوق</a>
+                                            <a href="{{url('/order-products-cart')}}">Checkout</a>
                                         </div>
                                     </div>
                                 </div>
