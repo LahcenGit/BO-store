@@ -34,7 +34,7 @@
                                             </div>
                                             <div class="ps-price">  {{$product->price}} دج </div>
                                         </div>
-                                        <p>{{$product->description}}</p>
+                                        {!! $product->description !!}
                                      
                                        
                                         <div class="space10"></div>

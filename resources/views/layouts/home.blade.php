@@ -182,7 +182,7 @@
                                     </li>
 
                                     <li class="dropdown">
-                                        <a href="./index.html" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-expanded="false">فئات</a>
+                                        <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-expanded="false">فئات</a>
                                         <ul class="dropdown-menu submenu" role="menu">
                                             @foreach($categories as $category)
                                             <li >

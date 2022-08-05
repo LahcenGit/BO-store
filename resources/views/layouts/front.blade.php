@@ -150,6 +150,8 @@
                                         @foreach((array) session('cart') as $id => $details)
                                             @php $total += $details['price'] * $details['quantity'] @endphp
                                         @endforeach
+                                        <form action="{{url('order-products-cart')}}" method="POST" enctype="multipart/form-data">
+                                            @csrf
                                     <div class="cart-info">
                                         <small>لديك <em class="highlight">{{ count((array) session('cart')) }}</em>  منتجات في حقيبة التسوق الخاصة بك  </small>
                                         @if(session('cart'))
@@ -162,18 +164,20 @@
                                                
                                             </div>
                                         </div>
-                                       
+                                        <input type="hidden" value="{{$details['name']}}" name="products[]">
+                                        <input type="hidden" value="{{$details['quantity']}}" name="qtes[]">
+                                        <input type="hidden" value="{{$details['price']}}" name="prices[]">
                                         @endforeach
                                         @endif
                                         <div class="ci-total"> المجموع {{$total}} دج</div>
+                                        <input type="hidden" value="{{$total}}" name="total">
                                         <div class="cart-btn">
                                             <a href="{{url('/cart')}}">سلة التسوق</a>
-                                            <a href="{{url('/order-products-cart')}}">Checkout</a>
+                                            <button type="submit" href="{{url('/order-products-cart')}}"> checkout </a>
                                         </div>
+                                    </form>
                                     </div>
                                 </div>
-                                
-                            </div>
                             <!-- Navmenu -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav navbar-left">
