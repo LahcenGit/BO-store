@@ -32,8 +32,8 @@
                                         @csrf
                                         <div class="form-group">
                                             <label class="mb-1"><strong>{{ __('Email') }}</strong></label>
-                                            <input type="email"  class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus value="hello@example.com">
-                                            @error('email')
+                                            <input type="text"  class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus value="username">
+                                            @error('username')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
@@ -48,16 +48,14 @@
                                             </span>
                                         @enderror
                                         </div>
-                                        <div class="form-row d-flex justify-content-between mt-4 mb-2" style="display:none !important">
+                                        <div class="form-row d-flex justify-content-between mt-4 mb-2">
                                             <div class="form-group">
                                                <div class="custom-control custom-checkbox ml-1">
-													<input type="checkbox" class="custom-control-input"name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-													<label class="custom-control-label" for="basic_checkbox_1">{{ __('Remember Me') }}</label>
+													<input type="checkbox" class="custom-control-input" name="remember_me" value="1" id="basic_checkbox_1">
+													<label class="custom-control-label" for="basic_checkbox_1">Se souvenir de moi</label>
 												</div>
                                             </div>
-                                            <div class="form-group" style="display:none">
-                                                <a href="{{route('password.request')}}">Mot de passe oublié?</a>
-                                            </div>
+                                            
                                         </div>
                                         <div class="text-center">
                                             <button type="submit" class="btn btn-primary btn-block">
