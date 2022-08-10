@@ -139,7 +139,11 @@
                                     <span class="icon-bar"></span>
                                 </button>
                                 <!-- Logo -->
+<<<<<<< Updated upstream
                                 <a class="navbar-brand" href="#"><img src="{{asset('Template/images/basic/logo-bo.png')}}" class="img-responsive" style="height: 100px!important;" alt=""/></a>
+=======
+                                <a class="navbar-brand" href="{{asset('/')}}"><img src="{{asset('Template/images/basic/logo-bo.png')}}" class="img-responsive" style="height: 100px!important;" alt=""/></a>
+>>>>>>> Stashed changes
                             </div>
 
                             <!-- Cart & Search -->

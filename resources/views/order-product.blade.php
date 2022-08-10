@@ -60,6 +60,7 @@
                                                             
                                                            
                                                             <li>
+<<<<<<< Updated upstream
                                                                 @foreach($products as $product)
                                                                 <input  type="hidden" name="products[]" value="{{$product}}" >
                                                                 @endforeach
@@ -67,6 +68,19 @@
                                                                 @foreach($qtes as $qte)
                                                                  <input type="hidden"  name="qtes[]" value="{{$qte}}">
                                                                 @endforeach
+=======
+                                                                <label for="login-email" class="required"> الكمية <em>*</em></label>
+                                                                <div class="input-box">
+                                                                    <input class="input-text required-entry validate-email"  name="qte"  type="number" required>
+                                                                </div>
+                                                            </li>
+                                                            <div class="single-form">
+                                   
+                                                                <input type="hidden"  name="product" value="{{$product->id}}">
+                                                            </div>
+                                                            <li>
+                                                                
+>>>>>>> Stashed changes
                                                             <div class="input-box">
                                                             <button class="btn large full-width d-f jc-c shake-x" id="add-to-cart"><span>إضغط هنا للطلب</span></button>
                                                             </div>
