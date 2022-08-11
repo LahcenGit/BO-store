@@ -37,6 +37,15 @@ class OrderProductController extends Controller
         $total = $request->total;
         $wilayas = Wilaya::all();
         $categories = Category::all();
+        return view('order-product-cart',compact('products','wilayas','categories','qtes','prices','total'));
+     }
+     public function orderProduct(Request $request){
+        $products = $request->product;
+        $qtes = 1;
+        $prices = $request->prices;
+        $total = $prices;
+        $wilayas = Wilaya::all();
+        $categories = Category::all();
         return view('order-product',compact('products','wilayas','categories','qtes','prices','total'));
      }
 }

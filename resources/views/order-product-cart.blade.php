@@ -62,9 +62,13 @@
                                                             </div>
                                                         </li>
                                                         <li>
-                                                            <input  type="hidden" name="products[]" value="{{$products}}" >
-                                                            <input type="hidden"  name="qtes[]" value="{{$qtes}}">
-                                                         </li>
+                                                            @foreach($products as $product)
+                                                            <input  type="hidden" name="products[]" value="{{$product}}" >
+                                                            @endforeach
+                                                            @foreach($qtes as $qte)
+                                                                <input type="hidden"  name="qtes[]" value="{{$qte}}">
+                                                            @endforeach
+                                                        </li>
                                                     
                                                     </ul>
                                                 </fieldset>
@@ -87,21 +91,21 @@
                             <div class="row">
                                     <div class="col-md-4 mt-2">
                                         <label class="title-pack">المنتج</label><br>
-                                       
-                                            <span>{{$products}} </span> <br>
-                                      
+                                        @foreach($products as $product)
+                                            <span>- {{$product}} </span> <br>
+                                        @endforeach
                                     </div>
                                     <div class="col-md-4 mt-2">
                                         <label class="title-pack">الكمية</label><br>
-                                        
-                                         <span>{{$qtes}} </span> <br>
-                                        
+                                        @foreach($qtes as $qte)
+                                         <span>{{$qte}} </span> <br>
+                                        @endforeach
                                     </div>
                                     <div class="col-md-4 mt-2">
                                         <label class="title-pack">المجموع</label><br>
-                                       
-                                         <span>{{number_format($prices * 1,2)}} دج</span> <br>
-                                       
+                                        @foreach($prices as $price)
+                                         <span>{{number_format($price * $qtes[$loop->iteration-1],2)}} دج</span> <br>
+                                        @endforeach
                                     </div>
                             </div>
                            {{--<div class="mt-2">

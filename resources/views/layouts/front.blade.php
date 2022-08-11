@@ -179,7 +179,7 @@
                                         <input type="hidden" value="{{$total}}" name="total">
                                         <div class="cart-btn">
                                             <a href="{{url('/cart')}}">سلة التسوق</a>
-                                            <button type="submit" href="{{url('/order-products-cart')}}"> checkout </a>
+                                            <button type="submit" class= "btn btn-success"> تأكيد </a>
                                         </div>
                                     </form>
                                     </div>

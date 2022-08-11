@@ -140,14 +140,15 @@
                             </div>
                             <!-- Cart & Search -->
                             <div class="header-xtra pull-right">
-                                <div class="topcart">
+                              <div class="topcart">
                                     <span> {{ count((array) session('cart')) }}<i class="fa fa-shopping-cart"></i></span>
                                         @php $total = 0 @endphp
                                         @foreach((array) session('cart') as $id => $details)
                                             @php $total += $details['price'] * $details['quantity'] @endphp
                                         @endforeach
-                                        <form action="{{url('order-products-cart')}}" method="POST" enctype="multipart/form-data">
-                                            @csrf
+                                    <form action="{{url('order-products-cart')}}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                    
                                     <div class="cart-info">
                                         <small>لديك <em class="highlight">{{ count((array) session('cart')) }}</em>  منتجات في السلة الخاصة بك  </small>
                                         @if(session('cart'))
@@ -155,7 +156,7 @@
                                         <div class="ci-item">
                                             <img src="{{asset('storage/'.$details['image'])}}" width="80" alt=""/>
                                             <div class="ci-item-info">
-                                                <h5><a href="./single-product.html">{{$details['name']}}</a></h5>
+                                                <h4>{{$details['name']}}</h4>
                                                 <p> {{$details['price']}} دج  * {{$details['quantity']}}  </p>
                                             </div>
                                         </div>
@@ -168,13 +169,13 @@
                                         <input type="hidden" value="{{$total}}" name="total">
                                         <div class="cart-btn">
                                             <a href="{{url('/cart')}}">سلة التسوق</a>
-                                            <button class="btn btn-success" type="submit" href="{{url('/order-products-cart')}}"> تأكيد </a>
+                                            <button class="btn btn-success" type="submit" href="{{url('/order-products-cart')}}"> تأكيد </button>
                                         </div>
+                                       
                                     </form>
                                     </div>
-                                </div>
-                                
-                            </div>
+                                 </div>
+                              </div>
                             <!-- Navmenu -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav navbar-left">

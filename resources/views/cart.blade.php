@@ -50,12 +50,12 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colspan="5" class="text-left"><h3><strong>المجموع {{ $total }}دج</strong></h3></td>
+                            <td colspan="5" class="text-left"><h3><strong>المجموع {{number_format($total,2)}}دج</strong></h3></td>
                             <input type="hidden" value="{{$total}}" name="total">
                         </tr>
                         <tr>
                             <td colspan="5" class="text-right">
-                                <button type="submit" class="btn btn-warning"><i class="fa fa-angle-left"></i> أطلب الان </button>
+                                <button type="submit" class="btn btn-success"><i class="fa fa-angle-left"></i> أطلب الان </button>
                                 
                             </td>
                         </form>

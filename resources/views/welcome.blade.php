@@ -77,23 +77,23 @@
                             <div class="pc-wrap">
                                 <div class="product-item">
                                     <div class="item-thumb">
-                                        <span class="badge new">الجديد</span>
+                                        <span class="badge new">متوفر</span>
                                         <img src="{{asset('storage/'.$product->photo)}}" class="img-responsive" alt=""/>
                                        <a href="{{url('/detail-product/'.$product->id)}}"> <div class="overlay-rmore fa fa-eye quickview" data-toggle="modal" data-target="#myModal"></div></a>
-                                        <div class="product-overlay">
-                                            <a href="#" class="addcart fa fa-shopping-cart"></a>
-                                            <a href="#" class="compare fa fa-signal"></a>
-                                            <a href="#" class="likeitem fa fa-heart-o"></a>
-                                        </div>
+                                        
                                     </div>
                                     <div class="product-info">
+                                    <form action="{{url('order-product')}}" method="POST" enctype="multipart/form-data">
+                                        @csrf
                                         <h4 class="product-title"><a href="{{url('detail-product/'.$product->id)}}">{{$product->name}}</a></h4>
-                                        <span class="product-price"> <b>  {{$product->price}} دج </b>   </span>
-                                        <a href="{{ route('order.to.cart', $product->id) }}" class="btn btn-danger">أطلب الان</a>
-                                        
-                                            <a href="{{ route('add.to.cart', $product->id) }}" class="btn btn-primary">اضافة لسلة التسوق</a>
+                                        <input type="hidden" name="product" value="{{$product->name}}">
+                                        <input type="hidden" name="prices" value="{{$product->price}}">
+
+                                        <button class="btn btn-success" type="submit" > أطلب الان</button>
+                                          
+                                            <a href="{{ route('add.to.cart', $product->id) }}" class="btn btn-danger">اضافة لسلة التسوق</a>
                                        
-                                        
+                                    </form> 
                                     </div>
                                 </div>
                             </div>

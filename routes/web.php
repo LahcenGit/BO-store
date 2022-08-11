@@ -34,6 +34,7 @@ Route::resource('/order-products',OrderController::class);
 Route::resource('/dashboard-admin',AdminController::class)->middleware('can:admin');
 Route::get('/order-product/{id}',[App\Http\Controllers\OrderProductController::class,'order']);
 Route::post('/order-products-cart',[App\Http\Controllers\OrderProductController::class,'orderPanier']);
+Route::post('/order-product',[App\Http\Controllers\OrderProductController::class,'orderProduct']);
 Route::get('/detail-product/{id}',[App\Http\Controllers\OrderProductController::class,'detail']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home']);
 Route::get('/category-products/{id}',[App\Http\Controllers\OrderProductController::class,'categoryProducts']);
