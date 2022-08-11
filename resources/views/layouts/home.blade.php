@@ -24,6 +24,7 @@
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
         <!-- CSS -->
+
         <link rel="stylesheet" href="{{asset('Template/css/font-awesome/css/font-awesome.css')}}">
         <link rel="stylesheet" href="{{asset('Template/css/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{asset('Template/css/bootstrap-rtl.min.css')}}">
@@ -39,6 +40,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
         <link rel="shortcut icon" type="image/x-icon" href="{{asset('icon-bo.png')}}">
+        
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -139,7 +141,7 @@
                             <!-- Cart & Search -->
                             <div class="header-xtra pull-right">
                                 <div class="topcart">
-                                    <span>{{ count((array) session('cart')) }}<i class="fa fa-shopping-cart"></i></span>
+                                    <span> {{ count((array) session('cart')) }}<i class="fa fa-shopping-cart"></i></span>
                                         @php $total = 0 @endphp
                                         @foreach((array) session('cart') as $id => $details)
                                             @php $total += $details['price'] * $details['quantity'] @endphp
@@ -147,15 +149,14 @@
                                         <form action="{{url('order-products-cart')}}" method="POST" enctype="multipart/form-data">
                                             @csrf
                                     <div class="cart-info">
-                                        <small>لديك <em class="highlight">{{ count((array) session('cart')) }}</em>  منتجات في حقيبة التسوق الخاصة بك  </small>
+                                        <small>لديك <em class="highlight">{{ count((array) session('cart')) }}</em>  منتجات في السلة الخاصة بك  </small>
                                         @if(session('cart'))
                                         @foreach(session('cart') as $id => $details)  
                                         <div class="ci-item">
                                             <img src="{{asset('storage/'.$details['image'])}}" width="80" alt=""/>
                                             <div class="ci-item-info">
                                                 <h5><a href="./single-product.html">{{$details['name']}}</a></h5>
-                                                <p> {{$details['price']}}دج  * {{$details['quantity']}}  </p>
-                                               
+                                                <p> {{$details['price']}} دج  * {{$details['quantity']}}  </p>
                                             </div>
                                         </div>
                                         <input type="hidden" value="{{$details['name']}}" name="products[]">
@@ -163,11 +164,11 @@
                                         <input type="hidden" value="{{$details['price']}}" name="prices[]">
                                         @endforeach
                                         @endif
-                                        <div class="ci-total"> المجموع {{$total}} دج</div>
+                                        <div class="ci-total"> المجموع {{number_format($total,2)}} دج</div>
                                         <input type="hidden" value="{{$total}}" name="total">
                                         <div class="cart-btn">
                                             <a href="{{url('/cart')}}">سلة التسوق</a>
-                                            <button type="submit" href="{{url('/order-products-cart')}}"> checkout </a>
+                                            <button class="btn btn-success" type="submit" href="{{url('/order-products-cart')}}"> تأكيد </a>
                                         </div>
                                     </form>
                                     </div>
@@ -210,6 +211,8 @@
                     </nav>
                 </header>
             </div>
+
+ 
 
             @yield('content')
             <!-- FOOTER -->
