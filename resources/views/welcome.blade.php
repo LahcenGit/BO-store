@@ -25,8 +25,47 @@
 
             <div class="space10"></div>
 
-            <!-- BLOCK -->
-            <div class="f-categories">
+          
+
+            <!-- PRODUCTS -->
+            <div class="container padding40">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="heading-sub heading-sub2 text-center">
+                            <h5><span>منتجات جديدة</span></h5>
+                            <p>اكتشفوا منتجات الأجواد الجديدة الطبيعية ذات الجودة العالية</p>
+                        </div>
+                        <div class="product-carousel3">
+                            @foreach($products as $product)
+                            <div class="pc-wrap" style="background-color: rgba(234,234,234,0.34); margin:2px; padding-top:20px;">
+                                <div class="product-item">
+                                    <div class="item-thumb">
+                                        <span class="badge new">متوفر</span>
+                                        <a href="{{url('/detail-product/'.$product->id)}}"> <img src="{{asset('storage/'.$product->photo)}}" class="img-responsive" alt=""/> </a>
+                                    </div>
+                                    <div class="product-info">
+                                    <form action="{{url('order-product')}}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        <h4 class="product-title"><a href="{{url('detail-product/'.$product->id)}}">{{$product->name}}</a></h4>
+                                        <h4 class="product-price" style="font-weight: 700; color:#D6644A;"> {{number_format($product->price, 2)}} دج </h4>
+                                        <input type="hidden" name="product" value="{{$product->name}}">
+                                        <input type="hidden" name="prices" value="{{$product->price}}">
+                                        <button class="btn btn-success" type="submit" > أطلب الان</button>
+                                        <a href="{{ route('add.to.cart', $product->id) }}" class="btn btn-danger" style="background-color: #D6644A;
+                                            border-color: #D6644A; ">اضافة لسلة التسوق</a>
+                                    </form> 
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+              <!-- BLOCK -->
+              <div class="f-categories">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -59,46 +98,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PRODUCTS -->
-            <div class="container padding40">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="heading-sub heading-sub2 text-center">
-                            <h5><span>منتجات جديدة</span></h5>
-                            <p>اكتشفوا منتجات الأجواد الجديدة الطبيعية ذات الجودة العالية</p>
-                        </div>
-                        <div class="product-carousel3">
-                            @foreach($products as $product)
-                            <div class="pc-wrap">
-                                <div class="product-item">
-                                    <div class="item-thumb">
-                                        <span class="badge new">متوفر</span>
-                                        <img src="{{asset('storage/'.$product->photo)}}" class="img-responsive" alt=""/>
-                                       <a href="{{url('/detail-product/'.$product->id)}}"> <div class="overlay-rmore fa fa-eye quickview" data-toggle="modal" data-target="#myModal"></div></a>
-                                        
-                                    </div>
-                                    <div class="product-info">
-                                    <form action="{{url('order-product')}}" method="POST" enctype="multipart/form-data">
-                                        @csrf
-                                        <h4 class="product-title"><a href="{{url('detail-product/'.$product->id)}}">{{$product->name}}</a></h4>
-                                        <input type="hidden" name="product" value="{{$product->name}}">
-                                        <input type="hidden" name="prices" value="{{$product->price}}">
-
-                                        <button class="btn btn-success" type="submit" > أطلب الان</button>
-                                          
-                                            <a href="{{ route('add.to.cart', $product->id) }}" class="btn btn-danger">اضافة لسلة التسوق</a>
-                                       
-                                    </form> 
-                                    </div>
-                                </div>
-                            </div>
-                           
-                            @endforeach
                         </div>
                     </div>
                 </div>

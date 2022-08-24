@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="{{asset('Template/js/vendors/slick/slick.css')}}">
         <link rel="stylesheet" href="{{asset('Template/js/vendors/rs-plugin/css/settings.css')}}">
         <link rel="stylesheet" href="{{asset('Template/js/vendors/select/jquery.selectBoxIt.css')}}">
-        <link rel="stylesheet" href="{{asset('Template/css/subscribe-better.cs')}}s">
+        <link rel="stylesheet" href="{{asset('Template/css/subscribe-better.css')}}">
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css">
         <link rel="stylesheet" href="{{asset('Template/css/style.css')}}">
         <link rel="preconnect" href="https://fonts.googleapis.com">

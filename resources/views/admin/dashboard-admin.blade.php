@@ -7,15 +7,15 @@
             <!-- row -->
 			<div class="container-fluid">
                 <div class="row">
-					<div class="col-xl-9 col-xxl-12">
+					<div class="col-lg-12">
 						<div class="row">
 							
-							<div class="col-xl-3 col-xxl-3 col-lg-6 col-sm-6">
-								<div class="card overflow-hidden">
-									<div class="card-body pb-0 px-3 pt-2">
+							<div class="col-lg-4 col-sm-6">
+								<div class="card overflow-hidden" style="padding:20px;">
+									<div class="card-body pb-0 px-3 pt-2" >
 										<div class="row">
 											<div class="col">
-												<h5 class="mb-1">{{$countproduct}}</h5>
+												<h2 class="mb-1">{{$countproduct}}</h2>
 												<span class="text-success">Produits</span>
 											</div>
 										</div>
@@ -23,12 +23,12 @@
 									
 								</div>
 							</div>
-							<div class="col-xl-3 col-xxl-3 col-lg-6 col-sm-6">
-								<div class="card overflow-hidden">
+							<div class="col-lg-4 col-sm-6">
+								<div class="card overflow-hidden" style="padding:20px;">
 									<div class="card-body pb-0 px-3 pt-2">
 										<div class="row">
 											<div class="col">
-												<h5 class="mb-1">{{$countorders}}</h5>
+												<h2 class="mb-1">{{$countorders}}</h2>
 												<span class="text-success">Commandes</span>
 											</div>
 										</div>
@@ -36,12 +36,12 @@
 									
 								</div>
 							</div>
-							<div class="col-xl-3 col-xxl-3 col-lg-6 col-sm-6">
-								<div class="card overflow-hidden">
+							<div class="col-lg-4 col-sm-6">
+								<div class="card overflow-hidden" style="padding:20px;">
 									<div class="card-body pb-0 px-3 pt-2">
 										<div class="row">
 											<div class="col">
-												<h5 class="mb-1">{{ number_format($revenu->s, 2) }} Da</h5>
+												<h2 class="mb-1">{{ number_format($revenu->s, 2) }} Da</h2>
 												<span class="text-success">Revenu</span>
 											</div>
 										</div>
@@ -91,7 +91,7 @@
 							<div class="col-xl-8 col-xxl-8 col-lg-12 col-md-12">
 								<div class="card">
 									<div class="card-header border-0 pb-0">
-										<h4 class="card-title">Les cinq dernières commandes</h4>
+										<h4 class="card-title">Les dernières commandes</h4>
 									</div>
 									<div class="card-body">
 										<div class="table-responsive">
@@ -108,7 +108,7 @@
 														<th><strong>Prénom</strong></th>
 														<th><strong>Wilaya</strong></th>
 														<th><strong>Adresse</strong></th>
-														<th><strong>Numéro</strong></th>
+														<th><strong>Tél</strong></th>
 														<th><strong>Status</strong></th>
 														
 													</tr>
@@ -127,7 +127,6 @@
 														<td>{{$order->wilaya->ar_name}}</td>
 														<td>{{$order->adresse}}</td>
 														<td>{{$order->phone}}</td>
-														<td></td>
 														@if ($order->status == 'En Attente' )
 														<td><span class="badge badge-warning">En Attente</span></td>
 														@elseif($order->status == 'Validé')

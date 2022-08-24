@@ -5,14 +5,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>BO </title>
+    <title>توابل الأجواد </title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="Dashboard/images/favicon.png">
-    <link href="Dashboard/css/style.css" rel="stylesheet">
+    <link href="{{asset('Dashboard/css/style.css')}}" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('icon-bo.png')}}">
 
 </head>
 
-<body class="h-100">
+
+<style>
+    body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #89879f;
+  text-align: left;
+  background-color: #313332;
+}
+</style>
+
+<body class="h-100" >
     <div class="authincation h-100">
         <div class="container h-100">
             <div class="row justify-content-center h-100 align-items-center">
@@ -23,8 +37,8 @@
                                 <div class="auth-form">
 
                                     <div class="text-center">
-                                        <img src="{{asset('/invoce/logo.png')}}" alt=""> <br>
-                                        <h4 class="text-center mb-4">Connectez-vous à votre compte</h4>
+                                        <img style="width: 50%; height:50%" src="{{asset('/Template/images/basic/logo-bo.png')}}" alt=""> <br>
+                                        <h4 class="text-center mb-4 mt-3">Connectez-vous à votre compte</h4>
 
                                     </div>
                                
@@ -58,12 +72,12 @@
                                             
                                         </div>
                                         <div class="text-center">
-                                            <button type="submit" class="btn btn-primary btn-block">
+                                            <button type="submit"  class="btn btn-danger btn-block" >
                                                 Se connecter</button>
                                         </div>
                                     </form>
                                     <div class="new-account mt-3">
-                                        <p>Vous n'avez pas de compte ? <a class="text-primary" href="{{url('/register')}}">
+                                        <p>Vous n'avez pas de compte ? <a  style="color: red" href="{{url('/register')}}">
                                             S'inscrire</a></p>
                                     </div>
                                 </div>
