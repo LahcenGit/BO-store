@@ -12,6 +12,8 @@
                         </div>
                         <div class="product-carousel3">
                             @foreach($products as $product)
+                            <form action="{{url('order-product')}}" method="POST" enctype="multipart/form-data">
+                             @csrf
                             <div class="pc-wrap">
                                 <div class="product-item">
                                     <div class="item-thumb">
@@ -27,12 +29,14 @@
                                     <div class="product-info">
                                         <h4 class="product-title"><a href="{{url('detail-product/'.$product->id)}}">{{$product->name}}</a></h4>
                                         <span class="product-price"> <b>  {{$product->price}} دج </b>   </span>
-                                        <a href="{{url('order-product/'.$product->id)}}" class="btn btn-danger">أطلب الان</a>
+                                        <input type="hidden" name="product" value="{{$product->name}}">
+                                        <input type="hidden" name="prices" value="{{$product->price}}">
+                                        <button class="btn btn-success" type="submit" >أطلب الان</button>
                                         
                                     </div>
                                 </div>
                             </div>
-                           
+                            </form>
                             @endforeach
                         </div>
                     </div>
