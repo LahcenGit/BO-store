@@ -41,7 +41,7 @@
                                 <div class="product-item">
                                     <div class="item-thumb">
                                         <span class="badge new">متوفر</span>
-                                        <a href="{{url('/detail-product/'.$product->id)}}"> <img src="{{asset('storage/'.$product->photo)}}" class="img-responsive" alt=""/> </a>
+                                        <a href="{{url('/detail-product/'.$product->id)}}"> <img src="{{asset('storage/productimage/'.$product->photo)}}" class="img-responsive" alt=""/> </a>
                                     </div>
                                     <div class="product-info">
                                     <form action="{{url('order-product')}}" method="POST" enctype="multipart/form-data">

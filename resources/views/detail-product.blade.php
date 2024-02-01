@@ -11,7 +11,7 @@
                                 <div class="col-md-5 col-sm-6">                                    
                                     <div class="owl-carousel prod-slider sync1">
                                         <div class="item"> 
-                                            <img src="{{asset('storage/'.$product->photo)}}" alt="">
+                                            <img src="{{asset('storage/productimage/'.$product->photo)}}" alt="">
                                            
                                         </div>
                                      </div>

@@ -37,10 +37,11 @@ class ProductController extends Controller
 
         if($hasFile){
             
-            $path =  $request->file('photo');
-            $name = $path->store('productimage');
-            $lien = Storage::putFile('productimage',$path); 
-            $product->photo = $lien;
+            $file =  $request->file('photo');
+            $destination = 'public/productimage';
+            $path = $file->store($destination);
+            $storageName = basename($path);
+            $product->photo = $storageName;
             
          }
         $product->save();
